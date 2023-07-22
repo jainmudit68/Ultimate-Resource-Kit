@@ -1,0 +1,113 @@
+body{
+    background-color: lightgray;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.div-1{
+    display: flex;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    width: 350px;
+}
+.infoDiv{
+    padding-left: 50px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+    justify-content: space-between;
+    border-radius: 10px;    
+    width: 45px;
+}
+
+.navbutton{
+    background-color: transparent;
+    border: none;
+    height: 45px;
+    width: 45px;
+    color: gray;
+    
+}
+
+.navbutton:hover{
+    background-color: blue;
+    color: white;
+}
+
+.retirementBlock{
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    width: 250px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-2{
+    width: 600px;
+}
+
+.goalDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileDetails{
+    display: flex;
+    justify-content: space-around;
+}
+.profilePic{
+    border-radius: 60px;
+}
+
+.div-3{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.linkButton{
+    height: 35px;
+    width: 100px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 8px;
+}
+a{
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+}
+.div-4{
+    border-left: solid blue 2px;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+.blueColor{
+    border: solid blue 2px;
+}
+
+
+
+
+
