@@ -8,6 +8,7 @@ img{
 
 .maindiv {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: white;
     border-radius: 10px;
