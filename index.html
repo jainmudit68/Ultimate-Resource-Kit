@@ -79,11 +79,26 @@
             </div>
             <br>
             <h3>Contributions Overtime</h3>
-            <img src="sample.avif">
+            <div class="chartElement">
+                <canvas id="myChart"></canvas>
+            </div>
             <br>
             <h3>How do I compare to my peers?</h3>
             <p>These numbers represent current goal achievement</p>
-            <img src="sample.avif">
+            <div class="compare-div">
+                <div>
+                    <p>Age: Under 30 &nbsp; <i class="fa-solid fa-caret-down"></i></p>
+                    <hr>
+                    <p>Salary: K 20 - K 30 &nbsp; <i class="fa-solid fa-caret-down"></i></p>
+                    <hr>
+                    <p>Gender: Male &nbsp; <i class="fa-solid fa-caret-down"></i></p>
+                </div>
+                <div class="pieElement">
+                    <canvas id="pie1"></canvas>
+                    <canvas id="pie2"></canvas>
+                    <canvas id="pie3"></canvas>
+                </div>
+            </div>
         </div>
         <div class="div-3">
             <div class="retirementBlock">
@@ -102,5 +117,87 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['20','','25','', '30','', '35','', '40','', '60','', '65'],
+            datasets: [{
+              label: 'Contributions',
+              data: [80, 90, 100, 110, 150, 160,180,200,210,230,260, 280, 320],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        const pie1=document.getElementById('pie1');
+        new Chart(pie1,{
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Top',
+                ],
+                datasets: [{
+                    label: 'Top',
+                    data: [78,22],
+                    backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'white'
+                    ],
+                    hoverOffset: 4
+                }]
+            }
+        });
+        const pie2=document.getElementById('pie2');
+        new Chart(pie2,{
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Average'
+                ],
+                datasets: [{
+                    label: 'Average',
+                    data: [95,5],
+                    backgroundColor: [
+                    
+                    'rgb(54, 162, 235)',
+                    'white'
+                    ],
+                    hoverOffset: 4
+                }]
+            }
+        });
+        const pie3=document.getElementById('pie3');
+        new Chart(pie3,{
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Me'
+                ],
+                datasets: [{
+                    label: 'Me',
+                    data: [59,41],
+                    backgroundColor: [
+                    
+                    'rgb(54, 162, 235)',
+                    'white'
+                    ],
+                    hoverOffset: 4
+                }]
+            }
+        });
+      </script>
+      
 </body>
 </html>
