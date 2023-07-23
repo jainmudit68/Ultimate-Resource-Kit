@@ -103,9 +103,25 @@
         <div class="div-3">
             <div class="retirementBlock">
                 <h3>Retirement Strategy</h3>
-                <img src="sample.avif">
-                <p>Employer Contribution &nbsp; &nbsp; 8.4%</p>
-                <p>Interest Rate &nbsp; &nbsp; &nbsp; 5%</p>
+                <div>
+                    <label><b>Employ Contribution</b></label>
+                    <br>
+                    <input type="range" min="1" max="24" value="12" id="slider-1">
+                    <span id="sliderValue-1"></span>
+                    <br><br>
+                    <label><b>Retirement Age</b></label>
+                    <br>
+                    <input type="range" min="1" max="80" value="65" id="slider-2"> 
+                    <span id="sliderValue-2"></span>
+                </div>
+                <div class="range-div">
+                    <p>Employer Contribution </p>
+                    <p>8.4%</p>
+                </div>
+                <div class="range-div">
+                    <p>Interest Rate </p>
+                    <p>5%</p>
+                </div>
                 <button class="linkButton" style="width: 100%;">Update</button>
                 <br>
                 <a href="">View Help Docs ></a>
@@ -118,86 +134,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['20','','25','', '30','', '35','', '40','', '60','', '65'],
-            datasets: [{
-              label: 'Contributions',
-              data: [80, 90, 100, 110, 150, 160,180,200,210,230,260, 280, 320],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-
-        const pie1=document.getElementById('pie1');
-        new Chart(pie1,{
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Top',
-                ],
-                datasets: [{
-                    label: 'Top',
-                    data: [78,22],
-                    backgroundColor: [
-                    'rgb(54, 162, 235)',
-                    'white'
-                    ],
-                    hoverOffset: 4
-                }]
-            }
-        });
-        const pie2=document.getElementById('pie2');
-        new Chart(pie2,{
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Average'
-                ],
-                datasets: [{
-                    label: 'Average',
-                    data: [95,5],
-                    backgroundColor: [
-                    
-                    'rgb(54, 162, 235)',
-                    'white'
-                    ],
-                    hoverOffset: 4
-                }]
-            }
-        });
-        const pie3=document.getElementById('pie3');
-        new Chart(pie3,{
-            type: 'doughnut',
-            data: {
-                labels: [
-                    'Me'
-                ],
-                datasets: [{
-                    label: 'Me',
-                    data: [59,41],
-                    backgroundColor: [
-                    
-                    'rgb(54, 162, 235)',
-                    'white'
-                    ],
-                    hoverOffset: 4
-                }]
-            }
-        });
-      </script>
-      
+    <script src="chartFile.js"></script>  
 </body>
 </html>

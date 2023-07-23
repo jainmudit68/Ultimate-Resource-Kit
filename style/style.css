@@ -66,6 +66,7 @@ img{
 
 .goalDiv{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -121,4 +122,12 @@ a{
 
 .compare-div{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.range-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
